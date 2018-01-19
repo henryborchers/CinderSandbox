@@ -6,4 +6,4 @@ include(/Users/hborcher/Downloads/Cinder/build/lib/macosx/Debug/cinderTargets.cm
 add_subdirectory(helloWorld)
 add_subdirectory(drawing)
 add_subdirectory(userInput)
-#add_subdirectory(image_resources_surface)
+add_subdirectory(image_resources_surface)
