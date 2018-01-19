@@ -8,7 +8,6 @@ public:
     void setup() override;
     void draw() override;
 
-    void keyDown(cinder::app::KeyEvent event) override;
 
 private:
     ci::gl::TextureRef mOriginal;
