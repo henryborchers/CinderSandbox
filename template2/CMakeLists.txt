@@ -1,2 +1,2 @@
-set(SUBPROJECT_NAME image_resource_surfaces)
+project(my_project)
 add_subdirectory(src)
