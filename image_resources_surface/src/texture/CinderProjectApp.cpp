@@ -10,7 +10,7 @@
 #include "Resources.h"
 #endif
 
-#define RESOURCE_PATH "../Resources"
+//#define RESOURCE_PATH "../Resources"
 
 using namespace ci;
 using namespace ci::app;

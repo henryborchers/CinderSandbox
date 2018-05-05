@@ -1,6 +1,6 @@
 add_executable(${SUBPROJECT_NAME}_assets
         main.cpp
-        "${CMAKE_SOURCE_DIR}/image_resources_surface/assets/dummy.png"
+        "${CMAKE_BINARY_DIR}/assets/dummy.png"
         CinderProjectApp.cpp
 
         )
@@ -13,10 +13,16 @@ set_target_properties(${SUBPROJECT_NAME}_assets PROPERTIES
 
 target_compile_definitions(${SUBPROJECT_NAME}_assets PRIVATE assets)
 
+target_compile_definitions(${SUBPROJECT_NAME}_assets PRIVATE RESOURCE_PATH="assets")
+
 if (APPLE)
     set_property(TARGET ${SUBPROJECT_NAME}_assets PROPERTY MACOSX_BUNDLE YES)
+    target_compile_definitions(${SUBPROJECT_NAME}_assets PRIVATE RESOURCE_PATH="../Resources")
 endif ()
+if (WINDOWS)
+    target_compile_definitions(${SUBPROJECT_NAME}_assets PRIVATE RESOURCE_PATH="../Resources")
 
+endif ()
 ##############################################################
 
 add_executable(${SUBPROJECT_NAME}_resources
